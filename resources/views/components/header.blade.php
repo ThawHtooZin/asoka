@@ -16,7 +16,7 @@
         <div class="flex gap-3 mt-4 sm:mt-0 mx-auto md:mx-0">
             <!-- Translate Button -->
             <div class="relative group">
-                <button class="flex items-center space-x-2 bg-primary p-2 rounded-lg border-4 border-primary">
+                <button class="flex items-center space-x-2 bg-primary p-2 rounded-lg border-4 border-primary group-hover:relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-translate text-white" viewBox="0 0 16 16">
                         <path
@@ -28,7 +28,7 @@
 
                 <!-- Language Dropdown Content -->
                 <div id="languageDropdown"
-                    class="absolute -right-10 mt-2 w-40 bg-white shadow-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+                    class="absolute -right-10 mt-2 w-40 bg-white shadow-xl rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 pointer-events-none group-hover:pointer-events-auto">
                     <div class="p-4 space-y-2">
                         <a href="{{ route('language.en') }}"
                             class="block p-2 rounded hover:bg-gray-100 text-gray-800">English</a>
@@ -41,7 +41,7 @@
             <!-- User Dropdown for Profile/Login/Register -->
             <div class="relative group">
                 <button
-                    class="flex items-center space-x-2 text-primary bg-white p-2 rounded-lg border-2 border-primary shadow-lg hover:bg-primary hover:text-white transition-all duration-200 ease-in-out">
+                    class="flex items-center space-x-2 text-primary bg-white p-2 rounded-lg border-2 border-primary shadow-lg hover:bg-primary hover:text-white transition-all duration-200 ease-in-out group-hover:relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                         class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
@@ -59,7 +59,7 @@
 
                 <!-- User Account Dropdown -->
                 <div id="userDropdown"
-                    class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50">
+                    class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-50 pointer-events-none group-hover:pointer-events-auto">
                     <ul>
                         @auth
                             <li><a href="/profile"
