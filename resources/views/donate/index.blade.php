@@ -2,17 +2,12 @@
     <div class="max-w-6xl mx-auto mt-12 mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Donation Information -->
         <div class="p-8 bg-gray-100 shadow-md rounded-2xl border border-gray-300">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Your Donation Matters</h2>
-            <p class="text-lg text-gray-700 leading-relaxed">
-                Your generosity supports our mission to spread wisdom and compassion through education and community outreach. Every donation goes towards:
-            </p>
-            <ul class="mt-4 text-lg text-gray-700 list-disc pl-5 space-y-2" style="margin-left: 30px;">
-                <li>Providing free learning materials</li>
-                <li>Supporting instructors and monks</li>
-                <li>Organizing meditation and teaching sessions</li>
-                <li>Maintaining community centers and temples</li>
-            </ul>
-    
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Dhamma Stars Children’s Retreat သင်ခန်းစာမှ ဆရာတော်များနှင့် ဆရာ၊ ဆရာမများကိုဝေယာဝစ္စပူဇော်နိုင်ရန်</h2>
+            <p class="text-lg text-gray-700 leading-relaxed">  
+                <ul class="mt-4 text-lg text-gray-700 list-disc pl-5 space-y-2">
+                </ul>
+
+
             <div class="mt-8 bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-300">
                 <div class="flex items-center gap-3 mb-4">
                     <svg class="w-8 h-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -35,21 +30,19 @@
                         <span class="font-medium">Account Name:</span> 
                         <span class="text-gray-600">Wisdom Foundation</span>
                     </div>
-                    <div class="flex justify-between text-lg text-gray-800">
-                        <span class="font-medium">SWIFT Code:</span> 
-                        <span class="text-gray-600">ABCD1234</span>
-                    </div>
                 </div>
             
                 <!-- Payment Options -->
                 <div class="mt-6">
                     <h3 class="text-xl font-semibold text-gray-800 mb-3">E-Wallet Payment Options</h3>
                     <div class="flex items-center gap-4">
-                        <div class="p-3 bg-white rounded-lg shadow border">
-                            <img src="/images/payments/wavepay.jpg" alt="Wave Money" class="w-20 h-auto" />
+                        <div class="p-3 bg-white rounded-lg shadow border text-center">
+                            <img src="/images/payments/wavepay.jpg" alt="Wave Money" width="200px"/><br>
+                            0957348374
                         </div>
-                        <div class="p-3 bg-white rounded-lg shadow border">
-                            <img src="/images/payments/kpay.jpg" alt="KBZ Pay" class="w-20 h-auto" />
+                        <div class="p-3 bg-white rounded-lg shadow border text-center">
+                            <img src="/images/payments/kpay.jpg" alt="KBZ Pay" width="200px" /><br>
+                            0957348374
                         </div>
                     </div>
                 </div>
@@ -60,9 +53,7 @@
 
         <!-- Donation Form -->
         <div id="donation-section" class="p-8 bg-white shadow-2xl rounded-2xl border border-gray-200">
-            <h1 class="text-3xl font-bold text-center text-gray-900 mb-6 tracking-wide uppercase">Make an Impact Today</h1>
-            <p class="text-lg text-gray-700 text-center mb-8 italic">Your donation helps us continue spreading wisdom and compassion.</p>
-    
+            <h1 class="text-2xl font-bold text-center text-gray-900 mb-6 tracking-wide uppercase">လှူဒါန်းနိုင်ရန် ဖြည့်သွင်းပါ</h1>
             <form action="/donate" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-md border border-gray-300">
@@ -75,10 +66,12 @@
                     <!-- Donate To -->
                     <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Donate To</h4>
                     <select name="donate_to" class="w-full px-5 py-3 border rounded-lg text-lg chosen-select" required>
-                        <option value="">Please Select</option>
-                        <option value="person 1">Person 1</option>
-                        <option value="person 2">Person 2</option>
-                        <option value="person 3">Person 3</option>
+                        <option value="Asoka Buddhist Studies Center">Asoka Website ရေရှည်ပြုပြင်ထိန်းသိမ်းနိုင်စေရန်</option>
+                        <option value="ဆရာတော်ဦးအာဒစ္စ၀ံသ">ဆရာတော်ဦးအာဒစ္စ၀ံသ</option>
+                        <option value="ဆရာတော်ဦးစန္ဒာ၀ရ">ဆရာတော်ဦးစန္ဒာ၀ရ</option>
+                        <option value="ဆရာတော်ဦးအာစရ">ဆရာတော်ဦးအာစရ</option>
+                        <option value="ဆရာတော်ဦးစိန္တိတ">ဆရာတော်ဦးစိန္တိတ</option>
+                        <option value="ဆရာတော်ဦး၀ါရမိန္ဒ">ဆရာတော်ဦး၀ါရမိန္ဒ</option>
                     </select>
                     
             
