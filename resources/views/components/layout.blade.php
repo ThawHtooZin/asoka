@@ -52,8 +52,6 @@
             {{ $message }}
         </div>
     @enderror
-
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const alert = document.getElementById('alert');
@@ -66,6 +64,16 @@
                 }, 5000); // Show for 5 seconds
             }
         });
+
+        $(document).ready(function() {
+            $(".chosen-select").chosen({
+                width: "100%", // Make it responsive
+                no_results_text: "No matches found!", // Custom message for no results
+                allow_single_deselect: true // Allow removing selection
+            });
+        });
+
+
     </script>
     <script src="/build/assets/app-z-Rg4TxU.js"></script>
     {{-- <link href="/build/assets/app-2WVNHME4.css" rel="stylesheet"> --}}

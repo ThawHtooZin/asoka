@@ -40,6 +40,7 @@ use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ZoomController;
 use App\Http\Controllers\DashboardResourceController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\PasswordController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -189,6 +190,10 @@ Route::middleware('localMiddleware')->group(function () {
         Route::post('/login', [LoginController::class, 'login']); // Process login
         Route::get('/register', [RegisterController::class, 'index']); // Show registration form
         Route::post('/register', [RegisterController::class, 'register']); // Process registration
+        Route::get('password/reset', [PasswordController::class, 'index']); // Process registration
+        Route::post('password/reset', [PasswordController::class, 'email']); // Process registration
+        Route::put('password/update', [PasswordController::class, 'reset']); // Process registration
+
     });
 
     // Gallery

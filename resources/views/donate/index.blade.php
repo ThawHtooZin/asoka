@@ -74,12 +74,13 @@
             
                     <!-- Donate To -->
                     <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Donate To</h4>
-                    <select name="donate_to" class="w-full px-5 py-3 border rounded-lg text-lg" required>
+                    <select name="donate_to" class="w-full px-5 py-3 border rounded-lg text-lg chosen-select" required>
                         <option value="">Please Select</option>
                         <option value="person 1">Person 1</option>
                         <option value="person 2">Person 2</option>
                         <option value="person 3">Person 3</option>
                     </select>
+                    
             
                     <!-- Upload Proof of Payment -->
                     <div class="mt-6">
