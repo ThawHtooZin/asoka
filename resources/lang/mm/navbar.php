@@ -17,6 +17,7 @@ return [
     'innovation_partnerships' => 'မိတ်ဖက်အဖွဲ့အစည်းများ',
     'innovation_research_articles' => 'သုတေသနဆောင်းပါးများ',
     'meeting' => 'တွေ့ဆုံခန်း ',
+    'donate' => 'လှူဒါန်းရန်',
     'news' => 'သတင်းများနှင့် အပ်ဒိတ်များ',
     'gallery' => 'ဓာတ်ပုံများ',
     'contact' => 'ဆက်သွယ်ရန်',

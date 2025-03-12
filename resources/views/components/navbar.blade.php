@@ -59,6 +59,13 @@
                 <x-navlinkcontainer class="dropdown-content">
                     <x-navlink href="/courses">@lang('navbar.learning_courses')</x-navlink>
                     <x-navlink href="/elibrary">@lang('navbar.learning_elibrary')</x-navlink>
+                    <x-navlink href="/meeting" class="text-lg @if (Request::is('meeting')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.meeting')</x-navlink>
+                    {{-- @if (!empty(auth()->user()))
+                        Meeting
+                        <li><a href="/meeting"
+                                class="text-lg @if (Request::is('meeting')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.meeting')</a>
+                        </li>
+                    @endif --}}
                 </x-navlinkcontainer>
             </li>
 
@@ -87,13 +94,6 @@
                 </x-navlinkcontainer>
             </li>
 
-            @if (!empty(auth()->user()))
-                {{-- Meeting --}}
-                <li><a href="/meeting"
-                        class="text-lg @if (Request::is('meeting')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.meeting')</a>
-                </li>
-            @endif
-
             <!-- News -->
             <li><a href="/newsandupdate"
                     class="text-lg @if (Request::is('newsandupdate')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.news')</a>
@@ -104,6 +104,11 @@
                 class="text-lg @if (Request::is('gallery')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.gallery')</a>
             </li>
 
+            <!-- Donation -->
+            <li><a href="/donate"
+                class="text-lg @if (Request::is('newsandupdate')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.donate')</a>
+            </li>
+            
             <!-- Contact -->
             <a href="/contactus"
                 class="text-lg @if (Request::is('contactus')) text-underline @endif @if (App::getLocale() == 'mm') text-[0.9rem] font-bold @endif">@lang('navbar.contact')</a>

@@ -17,6 +17,7 @@ use App\Http\Controllers\DashboardChapterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardCourseCategoryController;
 use App\Http\Controllers\DashboardCourseController;
+use App\Http\Controllers\DashboardDonateController;
 use App\Http\Controllers\DashboardElibraryController;
 use App\Http\Controllers\DashboardForumController;
 use App\Http\Controllers\DashboardRequestController;
@@ -38,6 +39,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ZoomController;
 use App\Http\Controllers\DashboardResourceController;
+use App\Http\Controllers\DonateController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -166,6 +168,10 @@ Route::middleware('localMiddleware')->group(function () {
         });
     });
 
+    //Donate
+    Route::get('/donate', [DonateController::class, 'index']);
+    Route::post('/donate', [DonateController::class, 'create']);
+
     // News and Update
     Route::get('/newsandupdate', [NewsandUpdateController::class, 'index']);
     Route::get('/newsandupdate/{id}/show', [NewsandUpdateController::class, 'show']);
@@ -269,7 +275,6 @@ Route::middleware(['custom'])->group(function () {
         Route::get('/books/request', [DashboardRequestController::class, 'bookindex'])->name('book.request.index'); // List Book Requests
         Route::post('/books/request/{id}/confirm', [DashboardRequestController::class, 'bookconfirm'])->name('book.request.confirm'); // Book Confirm Requests
         Route::post('/books/request/{id}/achive', [DashboardRequestController::class, 'bookachive'])->name('book.request.achive'); // Book Achive Requests
-
         // News and Update Management
         Route::get('newsandupdates', [DashboardNewsandUpdateController::class, 'index'])->name('newsandupdate.index'); // List News and Update
         Route::post('newsandupdates/store', [DashboardNewsandUpdateController::class, 'store'])->name('newsandupdate.store'); // Store News and Update
@@ -289,5 +294,8 @@ Route::middleware(['custom'])->group(function () {
         Route::get('resources/{id}/edit', [DashboardResourceController::class, 'edit'])->name('resources.edit'); // Show edit form
         Route::put('resources/{id}', [DashboardResourceController::class, 'update'])->name('resources.update'); // Update resource
         Route::delete('resources/{id}', [DashboardResourceController::class, 'destroy'])->name('resources.destroy'); // Delete resource
+    
+        // Donate Management
+        Route::get('donate', [DashboardDonateController::class, 'index']);
     });
 });

@@ -7,7 +7,7 @@
     <title>{{ $title ?? 'Asoka Center of  Buddhist Studies' }}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="/build/assets/app-BjnaCxHG.css" rel="stylesheet">
+    <link href="/build/assets/app-BppHDAVw.css" rel="stylesheet">
     {{-- <link href="/build/assets/app-2WVNHME4.css" rel="stylesheet"> --}}
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Myanmar:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>

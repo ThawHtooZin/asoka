@@ -17,6 +17,7 @@ return [
     'innovation_partnerships' => 'Partnerships',
     'innovation_research_articles' => 'Research Articles',
     'meeting' => 'Meeting',
+    'donate' => 'Donation',
     'news' => 'News and Update',
     'gallery' => 'Gallery',
     'contact' => 'Contact Us',

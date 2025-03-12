@@ -454,6 +454,13 @@ return [
             'url' => 'dashboard/resources',
         ],
 
+        // Donate Management
+        [
+            'text' => 'Donation Management',
+            'icon' => 'fas fa-hand-holding-heart', // Folder icon for resources
+            'url' => 'dashboard/donate',
+        ],
+
         // Home Page link
         [
             'text' => 'Home Page',
