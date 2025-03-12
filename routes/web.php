@@ -169,13 +169,13 @@ Route::middleware('localMiddleware')->group(function () {
         });
     });
 
-    //Donate
-    Route::get('/donate', [DonateController::class, 'index']);
-    Route::post('/donate', [DonateController::class, 'create']);
-
     // News and Update
     Route::get('/newsandupdate', [NewsandUpdateController::class, 'index']);
     Route::get('/newsandupdate/{id}/show', [NewsandUpdateController::class, 'show']);
+
+    //Donate
+    Route::get('/donate', [DonateController::class, 'index']);
+    Route::post('/donate', [DonateController::class, 'create'])->middleware('auth');
 
     // Contact Us
     Route::get('/contactus', [ContactUsController::class, 'index']);
@@ -190,10 +190,9 @@ Route::middleware('localMiddleware')->group(function () {
         Route::post('/login', [LoginController::class, 'login']); // Process login
         Route::get('/register', [RegisterController::class, 'index']); // Show registration form
         Route::post('/register', [RegisterController::class, 'register']); // Process registration
-        Route::get('password/reset', [PasswordController::class, 'index']); // Process registration
-        Route::post('password/reset', [PasswordController::class, 'email']); // Process registration
-        Route::put('password/update', [PasswordController::class, 'reset']); // Process registration
-
+        Route::get('password/reset', [PasswordController::class, 'index']); // Show reset
+        Route::post('password/reset', [PasswordController::class, 'email']); // Process email check
+        Route::put('password/update', [PasswordController::class, 'reset']); // Process password reset
     });
 
     // Gallery

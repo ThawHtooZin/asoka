@@ -87,7 +87,12 @@
                         <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Upload Proof of Payment</h4>
                         <input type="file" name="payment_img" accept="image/*" class="w-full px-5 py-3 border rounded-lg text-lg" required />
                     </div>
-            
+                    @if ($errors->has('payment_img'))
+                        <div class="text-red-500 text-sm">
+                            {{ $errors->first('payment_img') }}
+                        </div>
+                    @endif
+                
                     <button type="submit" class="mt-5 w-full py-3 text-white font-semibold rounded-lg hover:bg-green-800 transition duration-200" style="background-color: #16a34a;">Submit Donation</button>
                 </div>
             </form>            
