@@ -66,7 +66,7 @@
                     <!-- Donate To -->
                     <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Donate To</h4>
                     <select name="donate_to" class="w-full px-5 py-3 border rounded-lg text-lg chosen-select" required>
-                        <option value="Asoka Buddhist Studies Center">Asoka Website ရေရှည်ပြုပြင်ထိန်းသိမ်းနိုင်စေရန်</option>
+                        <option value="Asoka Buddhist Studies Center">Asoka Website ရေရှည်တည်တံ့နိုင်စေရန်</option>
                         <option value="ဆရာတော်ဦးအာဒစ္စ၀ံသ">ဆရာတော်ဦးအာဒစ္စ၀ံသ</option>
                         <option value="ဆရာတော်ဦးစန္ဒာ၀ရ">ဆရာတော်ဦးစန္ဒာ၀ရ</option>
                         <option value="ဆရာတော်ဦးအာစရ">ဆရာတော်ဦးအာစရ</option>
