@@ -42,7 +42,7 @@
 
                 <!-- Language Dropdown Content -->
                 <div id="languageDropdown"
-                    class="absolute -right-10 mt-2 w-40 bg-white shadow-xl rounded-lg custom-group-hover-content transition-opacity duration-300 z-50 pointer-events-none">
+                    class="absolute -right-10 w-40 bg-white shadow-xl rounded-lg custom-group-hover-content transition-opacity duration-300 z-50 pointer-events-none">
                     <div class="p-4 space-y-2">
                         <a href="{{ route('language.en') }}"
                             class="block p-2 rounded hover:bg-gray-100 text-gray-800">English</a>
@@ -73,7 +73,7 @@
 
                 <!-- User Account Dropdown -->
                 <div id="userDropdown"
-                    class="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg custom-group-hover-content transition-opacity duration-300 z-50 pointer-events-none">
+                    class="absolute right-0 w-48 bg-white shadow-lg rounded-lg custom-group-hover-content transition-opacity duration-300 z-50 pointer-events-none">
                     <ul>
                         @auth
                             <li><a href="/profile"
