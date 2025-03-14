@@ -192,6 +192,7 @@ Route::middleware('localMiddleware')->group(function () {
         Route::post('/register', [RegisterController::class, 'register']); // Process registration
         Route::get('password/reset', [PasswordController::class, 'index']); // Show reset
         Route::post('password/reset', [PasswordController::class, 'email']); // Process email check
+        Route::get('password/reset/form', [PasswordController::class, 'showResetForm']); // Show reset form
         Route::put('password/update', [PasswordController::class, 'reset']); // Process password reset
     });
 

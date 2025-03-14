@@ -45,6 +45,7 @@
                 @method('PUT')
                 <!-- New Password Field -->
                 <input type="hidden" value="{{ $user->email }}" name="email">
+                <input type="hidden" value="{{ $token }}" name="token">
                 <div class="fade-in delay-300">
                     <label class="block text-blue-700 font-semibold mb-2" for="password">New Password</label>
                     <input type="password" id="password" name="password" required

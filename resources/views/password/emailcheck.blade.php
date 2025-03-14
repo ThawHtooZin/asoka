@@ -47,6 +47,12 @@
         <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full fade-in">
             <h2 class="text-2xl font-bold text-center text-blue-800 mb-6 fade-in delay-100">Reset Your Password</h2>
 
+            @if (session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                    <span class="block sm:inline">{{ session('success') }}</span>
+                </div>
+            @endif
+
             <form action="/password/reset" method="POST" class="space-y-4">
                 @csrf
                 <!-- Email -->

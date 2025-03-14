@@ -11,11 +11,11 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Video</th>
-                    <th>PDF</th>
-                    <th>Actions</th>
+                    <th>Date</th>
+                    <th>Donate To</th>
+                    <th>Amount</th>
+                    <th>User</th>
+                    <th>Payment Photo</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +35,13 @@
                @endforeach
             </tbody>
         </table>
+        <script>
+            $(document).ready(function() {
+                $('#resourcestable').DataTable({
+                    pageLength: 3
+                });
+            });
+        </script>
         {{-- <script>
             $(document).ready(function() {
                 $('#resourcestable').DataTable({

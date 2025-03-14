@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto mt-12 mb-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Donation Information -->
         <div class="p-8 bg-gray-100 shadow-md rounded-2xl border border-gray-300">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">Dhamma Stars Children’s Retreat သင်ခန်းစာမှ ဆရာတော်များနှင့် ဆရာ၊ ဆရာမများကိုဝေယာဝစ္စပူဇော်နိုင်ရန်</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Dhamma Stars Children’s Retreat သင်ခန်းစာမှ ဆရာတော်များနှင့် ဆရာ၊ ဆရာမများကိုပူဇော်နိုင်ရန်</h2>
             <p class="text-lg text-gray-700 leading-relaxed">  
                 <ul class="mt-4 text-lg text-gray-700 list-disc pl-5 space-y-2">
                 </ul>
@@ -61,6 +61,11 @@
                     <div class="mb-4">
                         <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-5">Donate Amount</h4>
                         <input type="number" name="amount" placeholder="Enter amount" class="w-full px-5 py-3 border rounded-lg text-lg" required />
+                        @if ($errors->has('amount'))
+                            <div class="text-red-500 text-sm">
+                                {{ $errors->first('amount') }}
+                            </div>
+                        @endif
                     </div>
             
                     <!-- Donate To -->
@@ -73,18 +78,22 @@
                         <option value="ဆရာတော်ဦးစိန္တိတ">ဆရာတော်ဦးစိန္တိတ</option>
                         <option value="ဆရာတော်ဦး၀ါရမိန္ဒ">ဆရာတော်ဦး၀ါရမိန္ဒ</option>
                     </select>
-                    
+                    @if ($errors->has('donate_to'))
+                        <div class="text-red-500 text-sm">
+                            {{ $errors->first('donate_to') }}
+                        </div>
+                    @endif
             
                     <!-- Upload Proof of Payment -->
                     <div class="mt-6">
                         <h4 class="text-2xl font-semibold text-gray-800 mb-4 mt-8">Upload Proof of Payment</h4>
                         <input type="file" name="payment_img" accept="image/*" class="w-full px-5 py-3 border rounded-lg text-lg" required />
+                        @if ($errors->has('payment_img'))
+                            <div class="text-red-500 text-sm">
+                                {{ $errors->first('payment_img') }}
+                            </div>
+                        @endif
                     </div>
-                    @if ($errors->has('payment_img'))
-                        <div class="text-red-500 text-sm">
-                            {{ $errors->first('payment_img') }}
-                        </div>
-                    @endif
                 
                     <button type="submit" class="mt-5 w-full py-3 text-white font-semibold rounded-lg hover:bg-green-800 transition duration-200" style="background-color: #16a34a;">Submit Donation</button>
                 </div>
