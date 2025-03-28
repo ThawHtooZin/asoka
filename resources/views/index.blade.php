@@ -34,9 +34,71 @@
             font-size: 1rem;
             color: #4a5568;
         }
+
+        .floating-alert-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            line-height: 1.5;
+        }
+
+        .floating-alert-link {
+            font-size: 1rem;
+            color: #1E3A8A;
+            font-style: italic;
+            font-weight: 600;
+            text-decoration: underline;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .floating-alert-link:hover {
+            color: #1D4ED8;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .floating-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-animation:hover {
+            animation-play-state: paused;
+        }
     </style>
 
     <x-banner />
+
+    <!-- Floating Alert with Alpine.js -->
+    <div 
+        x-data="{ show: true }" 
+        x-show="show" 
+        x-transition 
+        class="fixed bottom-[27rem] right-6 z-50 bg-blue-400 p-5 rounded-lg shadow-2xl shadow-blue-500/80 w-96 transform transition-transform duration-300 hover:scale-105 border-t-4 border-blue-600 floating-animation"
+        style="box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.3);"
+    >
+        <button 
+            @click="show = false" 
+            class="absolute top-2 right-2 text-black font-bold text-xl hover:text-red-600"
+        >&times;</button>
+
+        <strong class="floating-alert-title">
+            <span class="text-lg">Basic level</span> <span class="text-base"> အင်္ဂလိပ် ၊ မြန်မာ နှစ်ဘာသာဖြင့် ဗုဒ္ဓဝင်သင်တန်း အပ်နှံရန် ။</span> 
+        </strong>
+        <br><br>
+        <a href="https://forms.gle/1XJuwWDpQmfXFLqU9" class="floating-alert-link text-xs">
+            ဖောင်ဖြည့်ရန်အတွက် ဤနေရာကိုနှိပ်ပါ ။  
+        </a>
+    </div>
+
+    <!-- Alpine.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <!-- About Section -->
     <div class="mx-auto py-10 px-6 sm:px-10 lg:px-20">
@@ -74,7 +136,6 @@
             </div>
         </div>
     </div>
-
     <!-- Mission & Vision Section -->
     <section class="py-16 bg-gradient-to-b from-gray-100 to-gray-300">
         <div class="container mx-auto px-4 2xl:px-24 grid grid-rows-2 gap-y-12">
@@ -141,7 +202,6 @@
                         </div>
                     </div>
                 @endforeach
-
                 <div class="pt-6 mt-6 border-t border-gray-300 text-center sm:col-span-2 lg:col-span-3">
                     <a href="/newsandupdate"
                         class="text-blue-600 font-semibold text-md sm:text-lg hover:text-blue-800 transition duration-300 transform hover:scale-105">
@@ -151,7 +211,5 @@
             </div>
         </div>
     </section>
-
-
 
 </x-layout>
