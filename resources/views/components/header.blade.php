@@ -1,18 +1,24 @@
 <div class="py-3 bg-white shadow-lg">
     <style>
         .custom-group:hover .custom-group-hover {
-            background-color: #1d4ed8; /* Change to your desired hover background color */
-            color: white; /* Change to your desired hover text color */
-        }
-
-        .custom-group:hover .custom-group-hover-content {
-            display: block;
+            background-color: #1d4ed8;
+            /* Change to your desired hover background color */
+            color: white;
+            /* Change to your desired hover text color */
         }
 
         .custom-group-hover-content {
-            display: none;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .custom-group:hover .custom-group-hover-content {
+            opacity: 1;
+            pointer-events: auto;
         }
     </style>
+
     <!-- Header Container -->
     <div class="flex flex-wrap items-center justify-between px-4 sm:px-8">
         <!-- Logo and Title -->
@@ -30,7 +36,8 @@
         <div class="flex gap-3 mt-4 sm:mt-0 mx-auto md:mx-0">
             <!-- Translate Button -->
             <div class="relative custom-group">
-                <button class="flex items-center space-x-2 bg-primary p-2 rounded-lg border-4 border-primary custom-group-hover">
+                <button
+                    class="flex items-center space-x-2 bg-primary p-2 rounded-lg border-4 border-primary custom-group-hover">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-translate text-white" viewBox="0 0 16 16">
                         <path
@@ -102,7 +109,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    // Remove the toggle functions as they are no longer needed
-</script>
